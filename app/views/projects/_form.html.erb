@@ -1,0 +1,20 @@
+<table>
+    <%= form_for @project do |f| %>
+        <tr>
+            <td><%= f.label :uuid, 'UUID' %>:</td>
+            <td><%= f.text_field :uuid %></td>
+        </tr>
+        <tr>
+            <td><%= f.label :name, 'Name' %></td>
+            <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+            <td><%= f.label :description, 'Description' %></td>
+            <td><%= f.text_field :description %></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><%= f.submit %></td>
+        </tr>
+    <% end %>
+</table>

@@ -1,0 +1,9 @@
+<div id="user_nav" align="right">
+    <% if reviewer_signed_in? %>
+        Signed in as <%= current_reviewer.email %>. Not you?
+        <%= link_to "Sign out", destroy_reviewer_session_path, :method => :delete %>
+    <% else %>
+        <%= link_to "Sign up", new_reviewer_registration_path %> or
+        <%= link_to "Sign in", new_reviewer_session_path %>
+    <% end %>
+</div>

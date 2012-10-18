@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project uuid:</b>
+  <%= @review.project_uuid %>
+</p>
+
+<p>
+  <b>Reviewer:</b>
+  <%= @review.reviewer %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @review.status %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @review.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
