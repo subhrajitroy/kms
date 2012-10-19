@@ -1,5 +1,3 @@
-require "kaminari"
-
 class SearchController < ApplicationController
 
   def index
