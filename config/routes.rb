@@ -13,6 +13,10 @@ Kms::Application.routes.draw do
 
   match "/projetcs/:id/review" => 'projects#review' , :as => "project_review"
 
+  match "/search" => 'search#index'
+  match "/search/results" => 'search#search' ,:as => "search_results"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
