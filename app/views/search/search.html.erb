@@ -1,7 +1,8 @@
-<div>
-
-    <%= form_tag search_results_path, :method => :get do %>
-        <%= text_field_tag "query", "", :placeholder => "Enter your query here", :size => 40 %>
-    <% end %>
-
+<div id="search_container" align="center">
+    <table id="search_container_table">
+        <tr>
+            <td>Search</td>
+            <td><%= render "search/search_box" %></td>
+        </tr>
+    </table>
 </div>

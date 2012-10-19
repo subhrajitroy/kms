@@ -1,3 +1,5 @@
+require "kaminari"
+
 class SearchController < ApplicationController
 
   def index
@@ -7,9 +9,7 @@ class SearchController < ApplicationController
 
   def search
     query = params[:query]
-    @projects = Project.where("description like ? ", "%#{query}%")
-    puts "Search query is #{query}"
-    puts "Results size is #{@projects.size}"
+    @projects = Project.where("description like ? ", "%#{query}%").page(params[:page]).per(5)
     render "results"
   end
 

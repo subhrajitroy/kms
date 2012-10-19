@@ -1,0 +1,7 @@
+<div class="search_box">
+
+    <%= form_tag search_results_path, :method => :get do %>
+        <%= text_field_tag "query", "", :placeholder => "Enter your query here", :size => 80 %>
+    <% end %>
+
+</div>
